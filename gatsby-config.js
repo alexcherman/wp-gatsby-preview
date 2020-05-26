@@ -33,7 +33,7 @@ module.exports = {
         typeName: 'WordPress',
         fieldName: 'wordPress',
         url: `https://tc-wp.000webhostapp.com/graphql`,
-        refetchInterval: 10,
+        refetchInterval: 20,
       },
     },
   ],

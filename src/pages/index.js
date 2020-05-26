@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import styled from "styled-components";
 
 const IndexPage = ({data}) => {
-  const {pageMeta} = data.wordPress.pageBy
+  const {pageMeta} = data.wordPress.page
     
-  if(!pageMeta) return null;
+  if(!pageMeta) return <h1>Loading...</h1>;
   
   return (
     <View background={pageMeta.hero.background}>
@@ -23,7 +23,7 @@ export default IndexPage
 export const query = graphql`
   {
     wordPress {
-      pageBy(uri: "/home-page/") {
+      page(id: "cG9zdDo2") {
         id
         pageMeta {
           hero {
